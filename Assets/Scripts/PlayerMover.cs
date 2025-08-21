@@ -5,51 +5,54 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     private const float SPEED_COEFFICENT = 50;
-    private const string HORIZONTAL_EXIS = "Horizontal";
-    private const string GROUND_TAG = "Ground";
 
     [SerializeField] private float _speedX = 1;
     [SerializeField] private float _jumpForce = 500;
 
     private Rigidbody2D _rigB;
-    private float _dirrection;
-    private bool _isJump;
-    private bool _isGround;
 
+    private float _previousDirection;
+
+    private bool _isTurnRight = true;
 
 
     private void Start()
     {
         _rigB = GetComponent<Rigidbody2D>();
+        _previousDirection = 0;
     }
 
-    private void Update()
-    {
-        _dirrection = Input.GetAxis(HORIZONTAL_EXIS);
-        if (_isGround && Input.GetKeyDown(KeyCode.W))
-        {
-            _isJump = true;
-        }
 
+    public void Jump()
+
+    {
+        _rigB.AddForce(new Vector2(0, _jumpForce));
     }
 
-    private void FixedUpdate()
 
+    public void Move(float dirrection, bool IsGround)
     {
-        _rigB.linearVelocity = new Vector2(_speedX * _dirrection * SPEED_COEFFICENT * Time.fixedDeltaTime, _rigB.linearVelocity.y);
-        if (_isJump)
+        _rigB.linearVelocity = new Vector2(_speedX * dirrection * SPEED_COEFFICENT * Time.fixedDeltaTime, _rigB.linearVelocity.y);
+
+        if ((dirrection > 0 && _isTurnRight == false)
+            || (dirrection < 0 && _isTurnRight))
         {
-            _rigB.AddForce(new Vector2(0, _jumpForce));
-            _isJump = false;
-            _isGround = false;
+            Flip();
+        }
+
+        if (Mathf.Sign(dirrection) != Mathf.Sign(_previousDirection) && dirrection != 0 && IsGround)
+        {
+            _rigB.linearVelocity = new Vector2(_rigB.linearVelocity.x, 0);
+            _previousDirection = dirrection;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void Flip()
     {
-        if (collision.gameObject.CompareTag(GROUND_TAG))
-        {
-            _isGround = true;
-        }
+        _isTurnRight = !_isTurnRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
