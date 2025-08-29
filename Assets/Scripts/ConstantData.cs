@@ -6,6 +6,7 @@ public static class ConstantData
     {
         public static readonly int SpeedX = Animator.StringToHash(nameof(SpeedX));
         public static readonly int Jump = Animator.StringToHash(nameof(Jump));
+        public static readonly int Ground = Animator.StringToHash(nameof(Ground));
     }
 
     public static class Tags 
