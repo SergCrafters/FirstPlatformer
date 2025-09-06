@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using UnityEngine;
 
@@ -8,8 +7,8 @@ public class Finish : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (_switches.All(i => i.IsActive))
-        { 
+        {
             gameObject.SetActive(false);
-        }    
+        }
     }
 }

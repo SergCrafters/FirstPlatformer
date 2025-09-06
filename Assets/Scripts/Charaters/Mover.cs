@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMover : MonoBehaviour
+public class Mover : MonoBehaviour
 {
     private const float SPEED_COEFFICENT = 50;
 
@@ -10,11 +10,8 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private float _jumpForce = 500;
 
     private Rigidbody2D _rigB;
-
     private float _previousDirection;
-
     private bool _isTurnRight = true;
-
 
     private void Start()
     {
@@ -34,12 +31,6 @@ public class PlayerMover : MonoBehaviour
     {
         _rigB.linearVelocity = new Vector2(_speedX * dirrection * SPEED_COEFFICENT * Time.fixedDeltaTime, _rigB.linearVelocity.y);
 
-        if ((dirrection > 0 && _isTurnRight == false)
-            || (dirrection < 0 && _isTurnRight))
-        {
-            Flip();
-        }
-
         if (Mathf.Sign(dirrection) != Mathf.Sign(_previousDirection) && dirrection != 0 && IsGround)
         {
             _rigB.linearVelocity = new Vector2(_rigB.linearVelocity.x, 0);
@@ -47,12 +38,9 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
-
-    private void Flip()
+    public void Move(Transform target)
     {
-        _isTurnRight = !_isTurnRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        Vector2 newPosition = Vector2.MoveTowards(transform.position, target.position, _speedX * Time.fixedDeltaTime);
+        _rigB.MovePosition(newPosition);
     }
 }
