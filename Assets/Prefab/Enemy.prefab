@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 655167410790111405}
   - component: {fileID: 3752597282532504215}
   - component: {fileID: 880153209823082370}
+  - component: {fileID: 5974720381001620904}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wayPoints: []
-  _speedX: 1
+  _animator: {fileID: 4551225287356126464}
   _maxSqrDistance: 0.1
   _waitTime: 2
 --- !u!114 &3752597282532504215
@@ -154,6 +155,20 @@ MonoBehaviour:
   _targetLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &5974720381001620904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170900496798501955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8486d98f43f1ab94896579a20de2f867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedX: 1
+  _jumpForce: 500
 --- !u!1 &7524496558815857233
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +181,7 @@ GameObject:
   - component: {fileID: 5414670981512794470}
   - component: {fileID: 4551225287356126464}
   m_Layer: 0
-  m_Name: idle01
+  m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

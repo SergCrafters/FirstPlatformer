@@ -17741,6 +17741,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1506519901}
     - target: {fileID: 1545071007321534725, guid: 4306a41aa8864fa4e8e8b914502b9e7c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: ad97fc25aad37464d83c4b0462ccec87, type: 2}
+    - target: {fileID: 1545071007321534725, guid: 4306a41aa8864fa4e8e8b914502b9e7c, type: 3}
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
@@ -17786,7 +17790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5974720381001620904, guid: 4306a41aa8864fa4e8e8b914502b9e7c, type: 3}
       propertyPath: _speedX
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524496558815857233, guid: 4306a41aa8864fa4e8e8b914502b9e7c, type: 3}
+      propertyPath: m_Name
+      value: Animator
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21207,6 +21215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedX: 6
+  _runSpeedX: 2
   _jumpForce: 600
 --- !u!1839735485 &165685930940346759
 Tilemap:
