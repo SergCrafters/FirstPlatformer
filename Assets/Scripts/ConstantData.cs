@@ -11,6 +11,8 @@ public static class ConstantData
         public static readonly int IsOff = Animator.StringToHash(nameof(IsOff));
         public static readonly int IsWalk = Animator.StringToHash(nameof(IsWalk));
         public static readonly int IsRun = Animator.StringToHash(nameof(IsRun));
+        public static readonly int Attack = Animator.StringToHash(nameof(Attack));
+        public static readonly int Hit = Animator.StringToHash(nameof(Hit));
     }
 
     public static class Tags 

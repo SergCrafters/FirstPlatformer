@@ -1,6 +1,6 @@
 using UnityEngine;
 
-class FollowState : State
+class FollowState : State, IMoveState
 {
     private Animator _animator;
     private EnemyVision _vision;
@@ -10,7 +10,7 @@ class FollowState : State
 
 
     public FollowState(StateMachine stateMachine, Animator animator, Fliper fliper, Mover mover, EnemyVision vision, 
-                        float tryFindTime) : base(stateMachine)
+                        float tryFindTime, float sqrAttackDistance) : base(stateMachine)
     {
         _animator = animator;
         _vision = vision;
@@ -18,10 +18,13 @@ class FollowState : State
         _fliper = fliper;
 
         Transitions = new Transition[]
-{
+        {
             new LostTargetTransition(stateMachine, vision, tryFindTime),
-};
+            new TargetReachedTransition(stateMachine, this, sqrAttackDistance, mover.transform)
+        };
     }
+
+    public Transform Target => _target;
 
     public override void Enter()
     {
@@ -43,4 +46,4 @@ class FollowState : State
         }
 
     }
-}
+ }
