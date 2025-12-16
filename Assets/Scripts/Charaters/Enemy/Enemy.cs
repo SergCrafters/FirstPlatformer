@@ -2,6 +2,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(EnemyAttacker), typeof(EnemyVision), typeof(Mover))]
+[RequireComponent(typeof(EnemySound), typeof(EnemyGroundDetector))]
 public class Enemy : Character
 {
     [SerializeField] private WayPoint[] _wayPoints;
@@ -13,6 +14,8 @@ public class Enemy : Character
 
     private EnemyAttacker _attacker;
     private EnemyVision _vision;
+    private EnemyGroundDetector _groundDetector;
+    private EnemySound _audio;
     private EnemyStateMachine _stateMachine;
 
     protected override void Awake()
@@ -21,6 +24,9 @@ public class Enemy : Character
 
         _attacker = GetComponent<EnemyAttacker>();
         _vision = GetComponent<EnemyVision>();
+        _groundDetector = GetComponent<EnemyGroundDetector>();
+        _audio = GetComponent<EnemySound>();
+
         _animationEvent.DealingDamage += _attacker.Attack;
         _animationEvent.AttackEnded += _attacker.OnAttackEnded;
 
@@ -30,7 +36,7 @@ public class Enemy : Character
     {
         var mover = GetComponent<Mover>();
 
-        _stateMachine = new EnemyStateMachine(Fliper, mover, _vision, _animator, _attacker, _wayPoints ,_maxSqrDistance, transform,
+        _stateMachine = new EnemyStateMachine(Fliper, mover, _vision, _groundDetector, _animator, _attacker, _audio, _wayPoints ,_maxSqrDistance, transform,
                                                 _waitTime, _tryFindTime);
     }
 
@@ -51,13 +57,15 @@ public class Enemy : Character
     protected override void OnTakingDamage()
     {
         _animator.SetTrigger(ConstantData.AnimatorParameters.Hit);
-    
+        _audio.PlayHitSound();
+
         if (_vision.TrySeeTarget(out _) == false)
             Fliper.Flip();
     }
 
     protected override void OnDied()
     {
+        _audio.PlayDeathSound();
         Destroy(gameObject);
     }
 }

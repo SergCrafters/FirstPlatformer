@@ -6,15 +6,18 @@ class AttackState : State
     private Animator _animator;
     private EnemyVision _vision;
     private Fliper _fliper;
+    private EnemySound _audio;
     private LostTargetTransition _lostTargetTransition;
     private Transform _target;
 
-    public AttackState(StateMachine stateMachine, EnemyAttacker attacker, Animator animator, Fliper fliper, EnemyVision vision, float tryFindTime) : base(stateMachine)
+    public AttackState(StateMachine stateMachine, EnemyAttacker attacker, Animator animator, Fliper fliper, EnemyVision vision, EnemySound audio, 
+                        float tryFindTime) : base(stateMachine)
     {
         _attacker = attacker;
         _animator = animator;
         _vision = vision;
         _fliper = fliper;
+        _audio = audio;
 
         _lostTargetTransition = new LostTargetTransition(stateMachine, vision, tryFindTime);
 
@@ -40,6 +43,7 @@ class AttackState : State
         {
             _attacker.StartAttack();
             _animator.SetTrigger(ConstantData.AnimatorParameters.Attack);
+            _audio.PlayAttackSound();
         }
     }
 

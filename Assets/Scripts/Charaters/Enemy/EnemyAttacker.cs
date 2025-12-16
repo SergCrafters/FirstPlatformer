@@ -37,7 +37,6 @@ public class EnemyAttacker : MonoBehaviour
 
     public void Attack()
     {
-        print("атака врага");
         Collider2D hit = Physics2D.OverlapCircle(GetAttackOrigin(), _radius, _targetLayer);
 
 
