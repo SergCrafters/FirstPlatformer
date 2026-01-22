@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedX: 1
-  _runSpeedX: 1
+  _runSpeedX: 2
   _jumpForce: 500
 --- !u!114 &5598089515860305520
 MonoBehaviour:

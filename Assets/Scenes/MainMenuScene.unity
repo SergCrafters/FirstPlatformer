@@ -3152,6 +3152,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5090399674608235257, guid: 309fc4f5571c79a468af425990e124c2, type: 3}
+      propertyPath: _listener
+      value: 
+      objectReference: {fileID: 1165836487}
+    - target: {fileID: 5090399674608235257, guid: 309fc4f5571c79a468af425990e124c2, type: 3}
       propertyPath: _randomPitchSoundSource
       value: 
       objectReference: {fileID: 1143480965}
