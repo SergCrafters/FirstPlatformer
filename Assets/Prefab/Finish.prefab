@@ -358,6 +358,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223672163619772958, guid: c936873cb9c89d54a9bbb8dc34b26d41, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756401540249116421, guid: c936873cb9c89d54a9bbb8dc34b26d41, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9098140842470443241, guid: c936873cb9c89d54a9bbb8dc34b26d41, type: 3}
       propertyPath: m_Name
       value: MessageCanvas
