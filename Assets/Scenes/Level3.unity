@@ -50017,6 +50017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialAttack
       objectReference: {fileID: 0}
+    - target: {fileID: 8129366175097501524, guid: e6af87cf659cb0342a9bffb4b2b9af97, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 83574431744
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

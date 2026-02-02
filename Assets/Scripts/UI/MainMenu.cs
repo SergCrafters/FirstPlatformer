@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,6 +15,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private SettingsWindow _settingsWindow;
     [SerializeField] private SelectLevelWindow _selectLevelWindow;
     
+    [SerializeField] private LocalizedString _helloLocale;
+
+
     private void OnEnable()
     {
         _startButton.onClick.AddListener(LoadScene);
