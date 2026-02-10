@@ -52760,9 +52760,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1143336575736386048, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143336575736386048, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143336575736386048, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143336575736386048, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402221995986651449, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402221995986651449, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402221995986651449, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402221995986651449, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079703018371408334, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079703018371408334, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079703018371408334, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079703018371408334, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5677399546598279839, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
       propertyPath: m_Name
       value: WinCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677399546598279839, guid: ed7132452b6e6d241b5d1a16cee7b968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

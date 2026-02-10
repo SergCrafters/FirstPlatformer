@@ -15,28 +15,12 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: c1d7d6541ea920c44bfc3e1779fa3116
   m_Entries:
-  - m_Id: 151291469824
-    m_Key: Levels
+  - m_Id: 24123764678656
+    m_Key: WinTitle
     m_Metadata:
       m_Items: []
   - m_Id: 13457112735744
     m_Key: StartBtn
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13935775096832
-    m_Key: LevelsBtn
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14068268965888
-    m_Key: SettingsBtn
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14561108074496
-    m_Key: BackBtn
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16050161491968
-    m_Key: Music
     m_Metadata:
       m_Items: []
   - m_Id: 16319876210688
@@ -47,36 +31,52 @@ MonoBehaviour:
     m_Key: SettingsTitle
     m_Metadata:
       m_Items: []
-  - m_Id: 21791941369856
-    m_Key: ContinueBtn
+  - m_Id: 14068268965888
+    m_Key: SettingsBtn
     m_Metadata:
       m_Items: []
   - m_Id: 22029506748416
     m_Key: RestartBtn
     m_Metadata:
       m_Items: []
-  - m_Id: 22311082958848
-    m_Key: ExitBtn
-    m_Metadata:
-      m_Items: []
   - m_Id: 22580969644032
     m_Key: PauseBtn
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23382677299200
-    m_Key: FailTitle
     m_Metadata:
       m_Items: []
   - m_Id: 23808571121664
     m_Key: NextBtn
     m_Metadata:
       m_Items: []
-  - m_Id: 24123764678656
-    m_Key: WinTitle
+  - m_Id: 16050161491968
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935775096832
+    m_Key: LevelsBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151291469824
+    m_Key: Levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23382677299200
+    m_Key: FailTitle
     m_Metadata:
       m_Items: []
   - m_Id: 29359619219456
     m_Key: F
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22311082958848
+    m_Key: ExitBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21791941369856
+    m_Key: ContinueBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14561108074496
+    m_Key: BackBtn
     m_Metadata:
       m_Items: []
   m_Metadata:

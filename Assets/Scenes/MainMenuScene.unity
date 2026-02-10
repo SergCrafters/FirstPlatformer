@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 77189037}
   - component: {fileID: 77189039}
   - component: {fileID: 77189038}
+  - component: {fileID: 77189040}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -331,6 +332,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77189036}
   m_CullTransparentMesh: 1
+--- !u!114 &77189040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77189036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:c1d7d6541ea920c44bfc3e1779fa3116
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!224 &78137951 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2548090203145522591, guid: 95d405b6acd864540a5d9a66af27d5ac, type: 3}
@@ -763,6 +792,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249531456}
   m_CullTransparentMesh: 1
+--- !u!1 &347655413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347655415}
+  - component: {fileID: 347655414}
+  m_Layer: 0
+  m_Name: EntryPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &347655414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347655413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cdaaff426448634abd258c09cc8dfe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneNames:
+  - Level1
+  - Level2
+  - Level3
+  _selectLevelWindow: {fileID: 933289977}
+--- !u!4 &347655415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347655413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 984.06036, y: 497.07895, z: 0.7138355}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &376007256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1204,18 @@ MonoBehaviour:
   _selectLevelButton: {fileID: 918546341}
   _settingsWindow: {fileID: 1987449538}
   _selectLevelWindow: {fileID: 933289977}
+  _helloLocale:
+    m_TableReference:
+      m_TableCollectionName: GUID:c1d7d6541ea920c44bfc3e1779fa3116
+    m_TableEntryReference:
+      m_KeyId: 792849099300864
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &624278043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,10 +1964,6 @@ MonoBehaviour:
   _cellPrefub: {fileID: 3520819832747966596, guid: 650bfb4a61a669f45ba60047865a3057, type: 3}
   _container: {fileID: 965153602}
   _backButton: {fileID: 1763364239}
-  _sceneNames:
-  - Level1
-  - Level2
-  - Level3
 --- !u!224 &935716277 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2548090203145522591, guid: 95d405b6acd864540a5d9a66af27d5ac, type: 3}
@@ -4494,3 +4580,4 @@ SceneRoots:
   - {fileID: 88892156}
   - {fileID: 376007259}
   - {fileID: 4951562354915267934}
+  - {fileID: 347655415}
