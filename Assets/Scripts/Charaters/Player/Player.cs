@@ -1,9 +1,8 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(InputReader), typeof(GroundDetector), typeof(Mover))]
+[RequireComponent(typeof(PlayerSound), typeof(GroundDetector), typeof(Mover))]
 [RequireComponent(typeof(PlayerAnimator), typeof(CollisionHandler), typeof(PlayerAttacker))]
-[RequireComponent(typeof(PlayerSound))]
 public class Player : Character
 {
 
@@ -14,7 +13,7 @@ public class Player : Character
 
     private CollisionHandler _collisionHandler;
     private GroundDetector _groundDetector;
-    private InputReader _inputReader;
+    private IInputReader _inputReader;
     private PlayerAttacker _attacker;
     private PlayerAnimator _animator;
     private Mover _mover;
@@ -32,7 +31,6 @@ public class Player : Character
 
         _collisionHandler = GetComponent<CollisionHandler>();
         _groundDetector = GetComponent<GroundDetector>();
-        _inputReader = GetComponent<InputReader>();
         _attacker = GetComponent<PlayerAttacker>();
         _animator = GetComponent<PlayerAnimator>();
         _mover = GetComponent<Mover>();
@@ -130,6 +128,10 @@ public class Player : Character
             }
         }
     }
+
+    public void Initialize(IInputReader inputReader) => _inputReader = inputReader;
+
+
     protected override void OnTakingDamage()
     {
         _animator.SetHitTrigger();
