@@ -42911,7 +42911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6cf035c0298bb4eacc92a3f2c4ebc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isMobile: 0
+  _isMobile: 1
 --- !u!1 &1307873731
 GameObject:
   m_ObjectHideFlags: 0
@@ -49697,7 +49697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1933084514
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54789,11 +54789,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isMobile: 1
-  _movePointer: {fileID: 0}
+  _movePointer: {fileID: 2116694133}
   _joystick: {fileID: 2046165860}
-  _jumpPointer: {fileID: 0}
+  _jumpPointer: {fileID: 1933084515}
+  _attackPointer: {fileID: 0}
   _triggerJump: {fileID: 1003815827}
   _triggerDoubleJump: {fileID: 2135780550}
+  _attackTriggers: []
 --- !u!1001 &8231676453179200352
 PrefabInstance:
   m_ObjectHideFlags: 0
