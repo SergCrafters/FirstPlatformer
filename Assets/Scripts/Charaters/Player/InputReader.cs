@@ -14,9 +14,6 @@ public class InputReader : MonoBehaviour, IInputReader
         if (TimeManager.IsPaused)
             return;
 
-        //if (EventSystem.current.IsPointerOverGameObject())
-        //    return;
-
         Dirrection = Input.GetAxis(ConstantData.InpudData.HORIZONTAL_AXIS);
 
         if (Input.GetKeyDown(KeyCode.Space))

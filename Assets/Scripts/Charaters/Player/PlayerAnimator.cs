@@ -5,10 +5,6 @@ public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField] Animator _animator;
 
-    private void Start()
-    {
-        //int Jump = (ConstantData.AnimatorParameters.Jump);
-    }
     public void SetSpeedX(float speedX) 
     {
         _animator.SetFloat(ConstantData.AnimatorParameters.SpeedX,Mathf.Abs(speedX));

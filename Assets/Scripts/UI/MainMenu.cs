@@ -1,6 +1,8 @@
-using TMPro;
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,6 +19,13 @@ public class MainMenu : MonoBehaviour
     
     [SerializeField] private LocalizedString _helloLocale;
 
+    [SerializeField] private float _showingTime;
+    [SerializeField] private CanvasGroup _menuPanel;
+
+    private void Awake()
+    {
+        ShowMenu();
+    }
 
     private void OnEnable()
     {
@@ -38,4 +47,30 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(DEFAULT_LEVEL_INDEX);
     }
 
+    private void ShowMenu()
+    {
+        try
+        {
+            StartCoroutine(Showing());
+        }
+        catch (Exception) { }
+    }
+
+    private IEnumerator Showing()
+    {
+        yield return LocalizationSettings.InitializationOperation;
+
+        float time = 0;
+        float startAlpha = 0;
+        float finishAlpha = 1;
+
+        while (time < _showingTime)
+        {
+            time += Time.deltaTime;
+
+            _menuPanel.alpha = Mathf.Lerp(startAlpha, finishAlpha, time/_showingTime);
+            yield return null;
+        }
+            _menuPanel.alpha = finishAlpha;
+    }
 }

@@ -42911,7 +42911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6cf035c0298bb4eacc92a3f2c4ebc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isMobile: 1
+  _isMobile: 0
 --- !u!1 &1307873731
 GameObject:
   m_ObjectHideFlags: 0
@@ -54788,7 +54788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fb9136c40901e4c964db2e33e8e4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isMobile: 1
+  _isMobile: 0
   _movePointer: {fileID: 2116694133}
   _joystick: {fileID: 2046165860}
   _jumpPointer: {fileID: 1933084515}
@@ -54806,7 +54806,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1044138644852912172, guid: 73c1b704b4811f14e9f2dbc607e0a4cf, type: 3}
       propertyPath: _isMobile
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1044138644852912172, guid: 73c1b704b4811f14e9f2dbc607e0a4cf, type: 3}
       propertyPath: _inreractInput
